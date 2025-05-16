@@ -1,145 +1,118 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Engineering Colleges</title>
-  <link rel="stylesheet" href="university.css">
-  <link rel="script" href="university.js">
+  <link rel="stylesheet" href="../css/university.css">
 </head>
-
 <body>
 
-<div class="top">
-  <div class="nav-links">
-      <a href="#tu">Top Universities</a>
-      <a href="#tc">Top Courses</a>
-      <a href="#colleges">Colleges</a>
-      <a href="#exams">Exams</a>
-      <a href="#adm">Admission</a>
-  </div>
-  <div class="nav-buttons">
-      <a class="active" href="login.html">LOGIN</a>
-      <a href="#down">Download</a>
-  </div>
-</div>
-  <br>
-  <section class="row">
-    <div class="choose">
-      <div>
-        <details open>
-          <summary>Select States:</summary><br>
-          <select size="1" onchange="window.location.href=this.value">
-            <option value="#">Select States:
-            </option>
-            <option>Andhra Pradesh</option>
-            <option value="#tamilnadu">Tamil Nadu</option>
-            <option>Kerela</option>
-            <option>Krnataka</option>
-            <option>Maharastra</option>
-            <option>Odisha</option>
-          </select>
-        </details>
-      </div>
-      <div>
-        <details open>
-          <summary>Select Cities:</summary>
-          <br>
-          <select name="links" size="1" onchange="window.location.href=this.value">
-            <option value="#">Select Cities:</option>
-            <option value="#selam">Selam</option>
-            <option value="#madurai">Madurai</option>
-            <option value="#coimbatore">Coimbatore</option>
-            <option value="#vellore">Vellore</option>
-            <option value="#chennai">Chennai</option>
-            <option value="#thanjavur">Thanjavur</option>
-            <option value="#trichy">Trichy</option>
-            <option value="#dindugul">Dindugul</option>
-          </select>
-        </details>
-      </div>
-      <div>
-        <details open>
-          <summary>Select Fees:</summary>
-          <br>
-          <select>
-            <option>Less than 50,000</option>
-            <option>50,000 - 1L</option>
-            <option>1L-2L</option>
-            <option>2L-3L</option>
-            <option>3L-4L</option>
-            <option>4L-5L</option>
-          </select>
-        </details>
-      </div>
-      <div>
-        <details open>
-          <summary>Types of Colleges:</summary>
-          <br>
-          <select>
-            <option>Private</option>
-            <option>Government</option>
-          </select>
-      </div>
-      <div>
-        <details open>
-          <summary>Course Types:</summary>
-          <br>
-          <select>
-            <option>Degree</option>
-            <option>Diploma</option>
-            <option>Certification</option>
-          </select>
-        </details>
-      </div>
-      <div>
-        <details open>
-          <summary>Courses:</summary>
-          <br>
-          <select>
-            <option>Computer Science and Engineering</option>
-            <option>mechanical Engineering</option>
-            <option>Civil Engineering</option>
-            <option>Electrical and Electronics Engineering</option>
-            <option>Information Technology</option>
-            <option>Electronics and Communication Engineering</option>
-          </select>
-        </details>
-      </div>
-      <div>
-        <details open>
-          <summary>Course Duration:</summary>
-          <br>
-          <select>
-            <option>1 Year</option>
-            <option>2 Years</option>
-            <option>3 Years</option>
-            <option>4 Years</option>
-          </select>
-        </details>
-      </div>
-      <div>
-        <details open>
-          <summary>Gender Accepted:</summary>
-          <br>
-          <select>
-            <option>COED</option>
-            <option>Girls</option>
-          </select>
-        </details>
-      </div>
-    </div>
-    <a name="tamilnadu"></a>
-    <div class="colleges">
-      <a name="madurai"></a>
-      <div class="tce">
+  <div id="nav-placeholder"></div>
+
+  <aside class="choose" aria-label="Filter options">
+    <form autocomplete="off">
+      <details open>
+        <summary>Select State:</summary>
+        <label for="state-select">State</label>
+        <select id="state-select" name="state">
+          <option value="#">Select State</option>
+          <option value="#tamilnadu">Tamil Nadu</option>
+          <option value="#andhrapradesh">Andhra Pradesh</option>
+          <option value="#kerala">Kerala</option>
+          <option value="#karnataka">Karnataka</option>
+          <option value="#maharashtra">Maharashtra</option>
+          <option value="#odisha">Odisha</option>
+        </select>
+      </details>
+      <details open>
+        <summary>Select City:</summary>
+        <label for="city-select">City</label>
+        <select id="city-select" name="city">
+          <option value="#">Select City</option>
+          <option value="#selam">Selam</option>
+          <option value="#madurai">Madurai</option>
+          <option value="#coimbatore">Coimbatore</option>
+          <option value="#vellore">Vellore</option>
+          <option value="#chennai">Chennai</option>
+          <option value="#thanjavur">Thanjavur</option>
+          <option value="#trichy">Trichy</option>
+          <option value="#dindugul">Dindugul</option>
+        </select>
+      </details>
+      <details open>
+        <summary>Select Fees:</summary>
+        <label for="fee-select">Fees</label>
+        <select id="fee-select" name="fees">
+          <option>Less than 50,000</option>
+          <option>50,000 - 1L</option>
+          <option>1L-2L</option>
+          <option>2L-3L</option>
+          <option>3L-4L</option>
+          <option>4L-5L</option>
+        </select>
+      </details>
+      <details open>
+        <summary>Types of Colleges:</summary>
+        <label for="type-select">College Type</label>
+        <select id="type-select" name="type">
+          <option>Private</option>
+          <option>Government</option>
+        </select>
+      </details>
+      <details open>
+        <summary>Course Types:</summary>
+        <label for="course-type-select">Course Type</label>
+        <select id="course-type-select" name="course-type">
+          <option>Degree</option>
+          <option>Diploma</option>
+          <option>Certification</option>
+        </select>
+      </details>
+      <details open>
+        <summary>Courses:</summary>
+        <label for="course-select">Course</label>
+        <select id="course-select" name="course">
+          <option>Computer Science and Engineering</option>
+          <option>Mechanical Engineering</option>
+          <option>Civil Engineering</option>
+          <option>Electrical and Electronics Engineering</option>
+          <option>Information Technology</option>
+          <option>Electronics and Communication Engineering</option>
+        </select>
+      </details>
+      <details open>
+        <summary>Course Duration:</summary>
+        <label for="duration-select">Duration</label>
+        <select id="duration-select" name="duration">
+          <option>1 Year</option>
+          <option>2 Years</option>
+          <option>3 Years</option>
+          <option>4 Years</option>
+        </select>
+      </details>
+      <details open>
+        <summary>Gender Accepted:</summary>
+        <label for="gender-select">Gender</label>
+        <select id="gender-select" name="gender">
+          <option>COED</option>
+          <option>Girls</option>
+        </select>
+      </details>
+    </form>
+  </aside>
+
+  <main class="colleges" id="colleges" style="padding-top: 90px;">
+    <!-- Tamil Nadu Section -->
+    <section id="tamilnadu">
+      <!-- Madurai -->
+      <section id="madurai">
         <fieldset>
           <div class="img">
-            <img src="img/Thiagarajar College of Engineering,Madurai.avif">
+            <img src="../img/Thiagarajar College of Engineering,Madurai.avif" alt="Thiagarajar College of Engineering, Madurai">
             <div class="new">
-              <h3>Thiagarajar College of Engineering,Madurai</h3>
+              <h3>Thiagarajar College of Engineering, Madurai</h3>
               <div class="cont">
                 <div class="be">
                   <p>Rs.50,000</p>
@@ -155,20 +128,16 @@
                 </div>
               </div>
               <div class="apply">
-                <button>Apply Now</button>
+                <a href="../university/thiagarajar_college_of_engineering_madurai.html" class="apply-btn">Apply Now</a>
               </div>
             </div>
           </div>
         </fieldset>
-      </div>
-      <div class="vel">
         <fieldset>
           <div class="img">
-            <img src="img/Velammal College of Engineering.Madurai.jpeg">
+            <img src="../img/Velammal College of Engineering.Madurai.jpeg" alt="Velammal College of Engineering, Madurai">
             <div class="new">
-              <div>
-                <h3>Velammal College of Engineering.Madurai</h3>
-              </div>
+              <h3>Velammal College of Engineering, Madurai</h3>
               <div class="cont">
                 <div class="be">
                   <p>Rs.2,00,000</p>
@@ -184,18 +153,16 @@
                 </div>
               </div>
               <div class="apply">
-                <button>Apply Now</button>
+                <a href="../university/velammal_college_of_engineering_madurai.html" class="apply-btn">Apply Now</a>
               </div>
             </div>
           </div>
         </fieldset>
-      </div>
-      <div>
         <fieldset>
           <div class="img">
-            <img src="KLN Engineering of College,Madurai.webp">
+            <img src="../img/KLN Engineering of College,Madurai.webp" alt="KLN Engineering of College, Madurai">
             <div class="new">
-              <h3>KLN Engineering of College,Madurai</h3>
+              <h3>KLN Engineering of College, Madurai</h3>
               <div class="cont">
                 <div class="be">
                   <p>Rs.2,00,000</p>
@@ -211,18 +178,16 @@
                 </div>
               </div>
               <div class="apply">
-                <button>Apply Now</button>
+                <a href="../university/kln_engineering_college_madurai.html" class="apply-btn">Apply Now</a>
               </div>
             </div>
           </div>
         </fieldset>
-      </div>
-      <div>
         <fieldset>
           <div class="img">
-            <img src="ANNA University of Technology,Madurai.jpg">
+            <img src="../img/ANNA University of Technology,Madurai.jpg" alt="ANNA University of Technology, Madurai">
             <div class="new">
-              <h3>ANNA University of Technology,Madurai</h3>
+              <h3>ANNA University of Technology, Madurai</h3>
               <div class="cont">
                 <div class="be">
                   <p>Rs.43,800</p>
@@ -238,19 +203,19 @@
                 </div>
               </div>
               <div class="apply">
-                <button>Apply Now</button>
+                <a href="../university/anna_university_of_technology_madurai.html" class="apply-btn">Apply Now</a>
               </div>
             </div>
           </div>
         </fieldset>
-      </div>
-      <a id="chennai"></a>
-      <div>
+      </section>
+      <!-- Chennai -->
+      <section id="chennai">
         <fieldset>
           <div class="img">
-            <img src="Hindustan Institute of Technology and Science,Chennai.jpg">
+            <img src="../img/Hindustan Institute of Technology and Science,Chennai.jpg" alt="Hindustan Institute of Technology and Science, Chennai">
             <div class="new">
-              <h3>Hindustan Institute of Technology and Science,Chennai</h3>
+              <h3>Hindustan Institute of Technology and Science, Chennai</h3>
               <div class="cont">
                 <div class="be">
                   <p>Rs.229,500</p>
@@ -266,18 +231,16 @@
                 </div>
               </div>
               <div class="apply">
-                <button>Apply Now</button>
+                <a href="../university/hindustan_institute_of_technology_and_science_chennai.html" class="apply-btn">Apply Now</a>
               </div>
             </div>
           </div>
         </fieldset>
-      </div>
-      <div>
         <fieldset>
           <div class="img">
-            <img src="IIT Madras,Chennai.jpg">
+            <img src="../img/IIT Madras,Chennai.jpg" alt="IIT Madras, Chennai">
             <div class="new">
-              <h3>IIT Madras,Chennai</h3>
+              <h3>IIT Madras, Chennai</h3>
               <div class="cont">
                 <div class="be">
                   <p>Rs.75,116</p>
@@ -293,18 +256,16 @@
                 </div>
               </div>
               <div class="apply">
-                <button>Apply Now</button>
+                <a href="../university/iit_madras_chennai.html" class="apply-btn">Apply Now</a>
               </div>
             </div>
           </div>
         </fieldset>
-      </div>
-      <div>
         <fieldset>
           <div class="img">
-            <img src="Chennai Institute of Technology,Chennai.webp">
+            <img src="../img/Chennai Institute of Technology,Chennai.webp" alt="Chennai Institute of Technology, Chennai">
             <div class="new">
-              <h3>Chennai Institute of Technology,Chennai</h3>
+              <h3>Chennai Institute of Technology, Chennai</h3>
               <div class="cont">
                 <div class="be">
                   <p>Rs.55,000</p>
@@ -320,18 +281,16 @@
                 </div>
               </div>
               <div class="apply">
-                <button>Apply Now</button>
+                <a href="../university/chennai_institute_of_technology_chennai.html" class="apply-btn">Apply Now</a>
               </div>
             </div>
           </div>
         </fieldset>
-      </div>
-      <div>
         <fieldset>
           <div class="img">
-            <img src="SSN College of Engineering,Chennai.jpg">
+            <img src="../img/SSN College of Engineering,Chennai.jpg" alt="SSN College of Engineering, Chennai">
             <div class="new">
-              <h3>SSN College of Engineering,Chennai</h3>
+              <h3>SSN College of Engineering, Chennai</h3>
               <div class="cont">
                 <div class="be">
                   <p>Rs.50,000</p>
@@ -347,18 +306,16 @@
                 </div>
               </div>
               <div class="apply">
-                <button>Apply Now</button>
+                <a href="../university/ssn_college_of_engineering_chennai.html" class="apply-btn">Apply Now</a>
               </div>
             </div>
           </div>
         </fieldset>
-      </div>
-      <div>
         <fieldset>
           <div class="img">
-            <img src="Sathiyabama Institute of Science and Technology,Chennai.jpg">
+            <img src="../img/Sathiyabama Institute of Science and Technology,Chennai.jpg" alt="Sathiyabama Institute of Science and Technology, Chennai">
             <div class="new">
-              <h3>Sathiyabama Institute of Science and Technology,Chennai</h3>
+              <h3>Sathiyabama Institute of Science and Technology, Chennai</h3>
               <div class="cont">
                 <div class="be">
                   <p>Rs.80,000</p>
@@ -374,47 +331,44 @@
                 </div>
               </div>
               <div class="apply">
-                <button>Apply Now</button>
+                <a href="../university/sathiyabama_institute_of_science_and_technology_chennai.html" class="apply-btn">Apply Now</a>
               </div>
             </div>
           </div>
         </fieldset>
-      </div>
-      <a name="coimbatore"></a>
-      <div>
-        <fieldset>
-          <div>
-            <div class="img">
-              <img src="P.S.G College of Technology,Coimbatore.webp">
-              <div class="new">
-                <h3>P.S.G College of Technology,Coimbatore</h3>
-                <div class="cont">
-                  <div class="be">
-                    <p>Rs.88,140</p>
-                    <h6>B.E/B.TECH</h6>
-                  </div>
-                  <div class="me">
-                    <p>Rs.1,54,000</p>
-                    <h6>M.E/M.TECH</h6>
-                  </div>
-                  <div>
-                    <p style="color:#2200ff">8.8/10</p>
-                    <h6>Based on user reviewers</h6>
-                  </div>
-                </div>
-                <div class="apply">
-                  <button>Apply Now</button>
-                </div>
-              </div>
-            </div>
-        </fieldset>
-      </div>
-      <div>
+      </section>
+      <!-- Coimbatore -->
+      <section id="coimbatore">
         <fieldset>
           <div class="img">
-            <img src="Coimbatore Institute of Technology,Coimbatore.jpg">
+            <img src="../img/P.S.G College of Technology,Coimbatore.webp" alt="P.S.G College of Technology, Coimbatore">
             <div class="new">
-              <h3>Coimbatore Institute of Technology,Coimbatore</h3>
+              <h3>P.S.G College of Technology, Coimbatore</h3>
+              <div class="cont">
+                <div class="be">
+                  <p>Rs.88,140</p>
+                  <h6>B.E/B.TECH</h6>
+                </div>
+                <div class="me">
+                  <p>Rs.1,54,000</p>
+                  <h6>M.E/M.TECH</h6>
+                </div>
+                <div>
+                  <p style="color:#2200ff">8.8/10</p>
+                  <h6>Based on user reviewers</h6>
+                </div>
+              </div>
+              <div class="apply">
+                <a href="../university/psg_college_of_technology_coimbatore.html" class="apply-btn">Apply Now</a>
+              </div>
+            </div>
+          </div>
+        </fieldset>
+        <fieldset>
+          <div class="img">
+            <img src="../img/Coimbatore Institute of Technology,Coimbatore.jpg" alt="Coimbatore Institute of Technology, Coimbatore">
+            <div class="new">
+              <h3>Coimbatore Institute of Technology, Coimbatore</h3>
               <div class="cont">
                 <div class="be">
                   <p>Rs.24,600</p>
@@ -430,316 +384,315 @@
                 </div>
               </div>
               <div class="apply">
-                <button>Apply Now</button>
+                <a href="../university/coimbatore_institute_of_technology_coimbatore.html" class="apply-btn">Apply Now</a>
               </div>
             </div>
           </div>
         </fieldset>
-        <div>
-          <fieldset>
-            <div class="img">
-              <img src="Kumaraguru College of Technology,Coimbatore.jpg">
-              <div class="new">
-                <h3>Kumaraguru College of Technology,Coimbatore</h3>
-                <div class="cont">
-                  <div class="be">
-                    <p>Rs.88,140</p>
-                    <h6>B.E/B.TECH</h6>
-                  </div>
-                  <div class="me">
-                    <p>Rs.1,54,000</p>
-                    <h6>M.E/M.TECH</h6>
-                  </div>
-                  <div>
-                    <p style="color:#2200ff">8.8/10</p>
-                    <h6>Based on user reviewers</h6>
-                  </div>
+        <fieldset>
+          <div class="img">
+            <img src="../img/Kumaraguru College of Technology,Coimbatore.jpg" alt="Kumaraguru College of Technology, Coimbatore">
+            <div class="new">
+              <h3>Kumaraguru College of Technology, Coimbatore</h3>
+              <div class="cont">
+                <div class="be">
+                  <p>Rs.88,140</p>
+                  <h6>B.E/B.TECH</h6>
                 </div>
-                <div class="apply">
-                  <button>Apply Now</button>
+                <div class="me">
+                  <p>Rs.1,54,000</p>
+                  <h6>M.E/M.TECH</h6>
+                </div>
+                <div>
+                  <p style="color:#2200ff">8.8/10</p>
+                  <h6>Based on user reviewers</h6>
                 </div>
               </div>
-            </div>
-          </fieldset>
-        </div>
-        <a name="selam"></a>
-        <div>
-          <fieldset>
-            <div class="img">
-              <img src="Salem College of Engineering and Technology,Selam.jpg">
-              <div class="new">
-                <h3>Salem College of Engineering and Technology,Selam</h3>
-                <div class="cont">
-                  <div class="be">
-                    <p>Rs.50,000</p>
-                    <h6>B.E/B.TECH</h6>
-                  </div>
-                  <div class="me">
-                    <p>Rs.50,500</p>
-                    <h6>M.E/M.TECH</h6>
-                  </div>
-                  <div>
-                    <p style="color:#2200ff">8.1/10</p>
-                    <h6>Based on user reviewers</h6>
-                  </div>
-                </div>
-                <div class="apply">
-                  <button>Apply Now</button>
-                </div>
+              <div class="apply">
+                <a href="../university/kumaraguru_college_of_technology_coimbatore.html" class="apply-btn">Apply Now</a>
               </div>
             </div>
-          </fieldset>
-        </div>
-        <div>
-          <fieldset>
-            <div class="img">
-              <img src="Sona College of Technology,Selam.jpg">
-              <div class="new">
-                <h3>Sona College of Technology,Selam</h3>
-                <div class="cont">
-                  <div class="be">
-                    <p>Rs.55,000</p>
-                    <h6>B.E/B.TECH</h6>
-                  </div>
-                  <div class="me">
-                    <p>Rs.55,000</p>
-                    <h6>M.E/M.TECH</h6>
-                  </div>
-                  <div>
-                    <p style="color:#2200ff">8.3/10</p>
-                    <h6>Based on user reviewers</h6>
-                  </div>
+          </div>
+        </fieldset>
+      </section>
+      <!-- Selam -->
+      <section id="selam">
+        <fieldset>
+          <div class="img">
+            <img src="../img/Salem College of Engineering and Technology,Selam.jpg" alt="Salem College of Engineering and Technology, Selam">
+            <div class="new">
+              <h3>Salem College of Engineering and Technology, Selam</h3>
+              <div class="cont">
+                <div class="be">
+                  <p>Rs.50,000</p>
+                  <h6>B.E/B.TECH</h6>
                 </div>
-                <div class="apply">
-                  <button>Apply Now</button>
+                <div class="me">
+                  <p>Rs.50,500</p>
+                  <h6>M.E/M.TECH</h6>
+                </div>
+                <div>
+                  <p style="color:#2200ff">8.1/10</p>
+                  <h6>Based on user reviewers</h6>
                 </div>
               </div>
-            </div>
-          </fieldset>
-        </div>
-        <a name="trichy"></a>
-        <div>
-          <fieldset>
-            <div class="img">
-              <img src="NIT Tiruchirapalli,Trichy.JPG">
-              <div class="new">
-                <h3>NIT Tiruchirapalli,Trichy</h3>
-                <div class="cont">
-                  <div class="be">
-                    <p>Rs.161,7500</p>
-                    <h6>B.E/B.TECH</h6>
-                  </div>
-                  <div class="me">
-                    <p>Rs.109,750</p>
-                    <h6>M.E/M.TECH</h6>
-                  </div>
-                  <div>
-                    <p style="color:#2200ff">8.5/10</p>
-                    <h6>Based on user reviewers</h6>
-                  </div>
-                </div>
-                <div class="apply">
-                  <button>Apply Now</button>
-                </div>
+              <div class="apply">
+                <a href="../university/salem_college_of_engineering_and_technology_selam.html" class="apply-btn">Apply Now</a>
               </div>
             </div>
-          </fieldset>
-        </div>
-        <div>
-          <fieldset>
-            <div class="img">
-              <img src="K.Ramakrishnan College of Technology,Trichy.avif">
-              <div class="new">
-                <h3>K.Ramakrishnan College of Technology,Trichy</h3>
-                <div class="cont">
-                  <div class="be">
-                    <p>Rs.65,000</p>
-                    <h6>B.E/B.TECH</h6>
-                  </div>
-                  <div class="me">
-                    <p>Rs.30,000</p>
-                    <h6>M.E/M.TECH</h6>
-                  </div>
-                  <div>
-                    <p style="color:#2200ff">7.5/10</p>
-                    <h6>Based on user reviewers</h6>
-                  </div>
+          </div>
+        </fieldset>
+        <fieldset>
+          <div class="img">
+            <img src="../img/Sona College of Technology,Selam.jpg" alt="Sona College of Technology, Selam">
+            <div class="new">
+              <h3>Sona College of Technology, Selam</h3>
+              <div class="cont">
+                <div class="be">
+                  <p>Rs.55,000</p>
+                  <h6>B.E/B.TECH</h6>
                 </div>
-                <div class="apply">
-                  <button>Apply Now</button>
+                <div class="me">
+                  <p>Rs.55,000</p>
+                  <h6>M.E/M.TECH</h6>
+                </div>
+                <div>
+                  <p style="color:#2200ff">8.3/10</p>
+                  <h6>Based on user reviewers</h6>
                 </div>
               </div>
-            </div>
-          </fieldset>
-        </div>
-        <div>
-          <fieldset>
-            <div class="img">
-              <img src="Kongunadu College of Technology,Trichy.avif">
-              <div class="new">
-                <h3>Kongunadu College of Technology,Trichy</h3>
-                <div class="cont">
-                  <div class="be">
-                    <p>Rs.50,000</p>
-                    <h6>B.E/B.TECH</h6>
-                  </div>
-                  <div class="me">
-                    <p>Rs.50,000</p>
-                    <h6>M.E/M.TECH</h6>
-                  </div>
-                  <div>
-                    <p style="color:#2200ff">8.9/10</p>
-                    <h6>Based on user reviewers</h6>
-                  </div>
-                </div>
-                <div class="apply">
-                  <button>Apply Now</button>
-                </div>
+              <div class="apply">
+                <a href="../university/sona_college_of_technology_selam.html" class="apply-btn">Apply Now</a>
               </div>
             </div>
-          </fieldset>
-        </div>
-        <div>
-          <fieldset>
-            <div class="img">
-              <img src="Trichy Engineering College,Trichy.avif">
-              <div class="new">
-                <h3>Trichy Engineering College,Trichy</h3>
-                <div class="cont">
-                  <div class="be">
-                    <p>Rs.60,000</p>
-                    <h6>B.E/B.TECH</h6>
-                  </div>
-                  <div class="me">
-                    <p>Rs.60,000</p>
-                    <h6>M.E/M.TECH</h6>
-                  </div>
-                  <div>
-                    <p style="color:#2200ff">8.1/10</p>
-                    <h6>Based on user reviewers</h6>
-                  </div>
+          </div>
+        </fieldset>
+      </section>
+      <!-- Trichy -->
+      <section id="trichy">
+        <fieldset>
+          <div class="img">
+            <img src="../img/NIT Tiruchirapalli,Trichy.JPG" alt="NIT Tiruchirapalli, Trichy">
+            <div class="new">
+              <h3>NIT Tiruchirapalli, Trichy</h3>
+              <div class="cont">
+                <div class="be">
+                  <p>Rs.161,7500</p>
+                  <h6>B.E/B.TECH</h6>
                 </div>
-                <div class="apply">
-                  <button>Apply Now</button>
+                <div class="me">
+                  <p>Rs.109,750</p>
+                  <h6>M.E/M.TECH</h6>
+                </div>
+                <div>
+                  <p style="color:#2200ff">8.5/10</p>
+                  <h6>Based on user reviewers</h6>
                 </div>
               </div>
-            </div>
-          </fieldset>
-        </div>
-        <a name="vellore"></a>
-        <div>
-          <fieldset>
-            <div class="img">
-              <img src="Vellore Institute of Technology,Vellore.jpg">
-              <div class="new">
-                <h3>Vellore Institute of Technology,Vellore</h3>
-                <div class="cont">
-                  <div class="be">
-                    <p>Rs.55,000</p>
-                    <h6>B.E/B.TECH</h6>
-                  </div>
-                  <div class="me">
-                    <p>Rs.55,000</p>
-                    <h6>M.E/M.TECH</h6>
-                  </div>
-                  <div>
-                    <p style="color:#2200ff">8.3/10</p>
-                    <h6>Based on user reviewers</h6>
-                  </div>
-                </div>
-                <div class="apply">
-                  <button>Apply Now</button>
-                </div>
+              <div class="apply">
+                <a href="../university/nit_tiruchirapalli_trichy.html" class="apply-btn">Apply Now</a>
               </div>
             </div>
-          </fieldset>
-        </div>
-        <div>
-          <fieldset>
-            <div class="img">
-              <img src="Thanthai Periyar Government Institute of Technology,Vellore.jpeg">
-              <div class="new">
-                <h3>Thanthai Periyar Government Institute of Technology,Vellore</h3>
-                <div class="cont">
-                  <div class="be">
-                    <p>Rs.10,220</p>
-                    <h6>B.E/B.TECH</h6>
-                  </div>
-                  <div class="me">
-                    <p>Rs.10,970</p>
-                    <h6>M.E/M.TECH</h6>
-                  </div>
-                  <div>
-                    <p style="color:#2200ff">7.3/10</p>
-                    <h6>Based on user reviewers</h6>
-                  </div>
+          </div>
+        </fieldset>
+        <fieldset>
+          <div class="img">
+            <img src="../img/K.Ramakrishnan College of Technology,Trichy.avif" alt="K.Ramakrishnan College of Technology, Trichy">
+            <div class="new">
+              <h3>K.Ramakrishnan College of Technology, Trichy</h3>
+              <div class="cont">
+                <div class="be">
+                  <p>Rs.65,000</p>
+                  <h6>B.E/B.TECH</h6>
                 </div>
-                <div class="apply">
-                  <button>Apply Now</button>
+                <div class="me">
+                  <p>Rs.30,000</p>
+                  <h6>M.E/M.TECH</h6>
+                </div>
+                <div>
+                  <p style="color:#2200ff">7.5/10</p>
+                  <h6>Based on user reviewers</h6>
                 </div>
               </div>
-            </div>
-          </fieldset>
-        </div>
-        <a name="thanjavur"></a>
-        <div>
-          <fieldset>
-            <div class="img">
-              <img src="Sastra University,Thanjavur.avif">
-              <div class="new">
-                <h3>Sastra University,Thanjavur</h3>
-                <div class="cont">
-                  <div class="be">
-                    <p>Rs.10,220</p>
-                    <h6>B.E/B.TECH</h6>
-                  </div>
-                  <div class="me">
-                    <p>Rs.10,970</p>
-                    <h6>M.E/M.TECH</h6>
-                  </div>
-                  <div>
-                    <p style="color:#2200ff">7.3/10</p>
-                    <h6>Based on user reviewers</h6>
-                  </div>
-                </div>
-                <div class="apply">
-                  <button>Apply Now</button>
-                </div>
+              <div class="apply">
+                <a href="../university/k_ramakrishnan_college_of_technology_trichy.html" class="apply-btn">Apply Now</a>
               </div>
             </div>
-          </fieldset>
-        </div>
-        <a name="dindugul"></a>
-        <div>
-          <fieldset>
-            <div class="img">
-              <img src="PSNA College of Engineering and Technology,Dindigul.jpg">
-              <div class="new">
-                <h3>PSNA College of Engineering and Technology,Dindigul</h3>
-                <div class="cont">
-                  <div class="be">
-                    <p>Rs.2,00,000</p>
-                    <h6>B.E/B.TECH</h6>
-                  </div>
-                  <div class="me">
-                    <p>Rs.80,000</p>
-                    <h6>M.E/M.TECH</h6>
-                  </div>
-                  <div>
-                    <p style="color:#2200ff">8.3/10</p>
-                    <h6>Based on user reviewers</h6>
-                  </div>
+          </div>
+        </fieldset>
+        <fieldset>
+          <div class="img">
+            <img src="../img/Kongunadu College of Technology,Trichy.avif" alt="Kongunadu College of Technology, Trichy">
+            <div class="new">
+              <h3>Kongunadu College of Technology, Trichy</h3>
+              <div class="cont">
+                <div class="be">
+                  <p>Rs.50,000</p>
+                  <h6>B.E/B.TECH</h6>
                 </div>
-                <div class="apply">
-                  <button>Apply Now</button>
+                <div class="me">
+                  <p>Rs.50,000</p>
+                  <h6>M.E/M.TECH</h6>
+                </div>
+                <div>
+                  <p style="color:#2200ff">8.9/10</p>
+                  <h6>Based on user reviewers</h6>
                 </div>
               </div>
+              <div class="apply">
+                <a href="../university/kongunadu_college_of_technology_trichy.html" class="apply-btn">Apply Now</a>
+              </div>
             </div>
-          </fieldset>
-        </div>
-      </div>
-  </section>
-  <script src="university.js"></script>
-</body>
+          </div>
+        </fieldset>
+        <fieldset>
+          <div class="img">
+            <img src="../img/Trichy Engineering College,Trichy.avif" alt="Trichy Engineering College, Trichy">
+            <div class="new">
+              <h3>Trichy Engineering College, Trichy</h3>
+              <div class="cont">
+                <div class="be">
+                  <p>Rs.60,000</p>
+                  <h6>B.E/B.TECH</h6>
+                </div>
+                <div class="me">
+                  <p>Rs.60,000</p>
+                  <h6>M.E/M.TECH</h6>
+                </div>
+                <div>
+                  <p style="color:#2200ff">8.1/10</p>
+                  <h6>Based on user reviewers</h6>
+                </div>
+              </div>
+              <div class="apply">
+                <a href="../university/trichy_engineering_college_trichy.html" class="apply-btn">Apply Now</a>
+              </div>
+            </div>
+          </div>
+        </fieldset>
+      </section>
+      <!-- Vellore -->
+      <section id="vellore">
+        <fieldset>
+          <div class="img">
+            <img src="../img/Vellore Institute of Technology,Vellore.jpg" alt="Vellore Institute of Technology, Vellore">
+            <div class="new">
+              <h3>Vellore Institute of Technology, Vellore</h3>
+              <div class="cont">
+                <div class="be">
+                  <p>Rs.55,000</p>
+                  <h6>B.E/B.TECH</h6>
+                </div>
+                <div class="me">
+                  <p>Rs.55,000</p>
+                  <h6>M.E/M.TECH</h6>
+                </div>
+                <div>
+                  <p style="color:#2200ff">8.3/10</p>
+                  <h6>Based on user reviewers</h6>
+                </div>
+              </div>
+              <div class="apply">
+                <a href="../university/vellore_institute_of_technology_vellore.html" class="apply-btn">Apply Now</a>
+              </div>
+            </div>
+          </div>
+        </fieldset>
+        <fieldset>
+          <div class="img">
+            <img src="../img/Thanthai Periyar Government Institute of Technology,Vellore.jpeg" alt="Thanthai Periyar Government Institute of Technology, Vellore">
+            <div class="new">
+              <h3>Thanthai Periyar Government Institute of Technology, Vellore</h3>
+              <div class="cont">
+                <div class="be">
+                  <p>Rs.10,220</p>
+                  <h6>B.E/B.TECH</h6>
+                </div>
+                <div class="me">
+                  <p>Rs.10,970</p>
+                  <h6>M.E/M.TECH</h6>
+                </div>
+                <div>
+                  <p style="color:#2200ff">7.3/10</p>
+                  <h6>Based on user reviewers</h6>
+                </div>
+              </div>
+              <div class="apply">
+                <a href="../university/thanthai_periyar_government_institute_of_technology_vellore.html" class="apply-btn">Apply Now</a>
+              </div>
+            </div>
+          </div>
+        </fieldset>
+      </section>
+      <!-- Thanjavur -->
+      <section id="thanjavur">
+        <fieldset>
+          <div class="img">
+            <img src="../img/Sastra University,Thanjavur.avif" alt="Sastra University, Thanjavur">
+            <div class="new">
+              <h3>Sastra University, Thanjavur</h3>
+              <div class="cont">
+                <div class="be">
+                  <p>Rs.10,220</p>
+                  <h6>B.E/B.TECH</h6>
+                </div>
+                <div class="me">
+                  <p>Rs.10,970</p>
+                  <h6>M.E/M.TECH</h6>
+                </div>
+                <div>
+                  <p style="color:#2200ff">7.3/10</p>
+                  <h6>Based on user reviewers</h6>
+                </div>
+              </div>
+              <div class="apply">
+                <a href="../university/sastra_university_thanjavur.html" class="apply-btn">Apply Now</a>
+              </div>
+            </div>
+          </div>
+        </fieldset>
+      </section>
+      <!-- Dindugul -->
+      <section id="dindugul">
+        <fieldset>
+          <div class="img">
+            <img src="../img/PSNA College of Engineering and Technology,Dindigul.jpg" alt="PSNA College of Engineering and Technology, Dindugul">
+            <div class="new">
+              <h3>PSNA College of Engineering and Technology, Dindugul</h3>
+              <div class="cont">
+                <div class="be">
+                  <p>Rs.2,00,000</p>
+                  <h6>B.E/B.TECH</h6>
+                </div>
+                <div class="me">
+                  <p>Rs.80,000</p>
+                  <h6>M.E/M.TECH</h6>
+                </div>
+                <div>
+                  <p style="color:#2200ff">8.3/10</p>
+                  <h6>Based on user reviewers</h6>
+                </div>
+              </div>
+              <div class="apply">
+                <a href="../university/psna_college_of_engineering_and_technology_dindugul.html" class="apply-btn">Apply Now</a>
+              </div>
+            </div>
+          </div>
+        </fieldset>
+      </section>
+    </section>
+  </main>
 
+  <div id="footer-placeholder"></div>
+  <button id="backToTop" class="back-to-top" aria-label="Back to top" title="Back to top">↑</button>
+  <script src="../js/university.js"></script>
+  <script src="../js/components.js"></script>
+  <script>
+    loadComponent("#nav-placeholder", "../components/nav.html");
+    loadComponent("#footer-placeholder", "../components/footer.html", function() {
+      const yearSpan = document.getElementById('year');
+      if (yearSpan) yearSpan.textContent = new Date().getFullYear();
+    });
+  </script>
+</body>
 </html>

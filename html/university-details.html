@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Thiagarajar College of Engineering, Madurai - Details</title>
+  <link rel="stylesheet" href="../css/university.css">
+  <link rel="stylesheet" href="../css/university-detail.css">
+</head>
+<body>
+  <div id="nav-placeholder"></div>
+
+  <main class="university-detail">
+    <section class="uni-header">
+      <img src="../img/Thiagarajar College of Engineering,Madurai.avif" alt="Thiagarajar College of Engineering, Madurai" class="uni-img">
+      <div class="uni-info">
+        <h1>Thiagarajar College of Engineering, Madurai</h1>
+        <p>Location: Madurai, Tamil Nadu</p>
+        <p>Established: 1957</p>
+        <p>Accredited by NAAC, NBA</p>
+      </div>
+    </section>
+    
+    <section class="principal-message">
+      <h2>Principal's Message</h2>
+      <blockquote>
+        <p>
+          Welcome to Thiagarajar College of Engineering. We strive for academic and research excellence, nurturing students to become innovators and leaders.
+        </p>
+        <footer>— Dr. S. Example, Principal</footer>
+      </blockquote>
+    </section>
+
+    <section class="courses">
+      <h2>Courses Offered</h2>
+      <ul>
+        <li>B.E. Computer Science and Engineering</li>
+        <li>B.E. Mechanical Engineering</li>
+        <li>B.E. Civil Engineering</li>
+        <li>M.E. Electronics and Communication Engineering</li>
+        <!-- ... Add more as needed ... -->
+      </ul>
+    </section>
+
+    <section class="facilities">
+      <h2>Facilities</h2>
+      <ul>
+        <li>Library</li>
+        <li>Hostel</li>
+        <li>Sports Complex</li>
+        <li>Wi-Fi Campus</li>
+        <li>Auditorium</li>
+        <li>Transport</li>
+        <!-- ... -->
+      </ul>
+    </section>
+
+    <section class="application-form">
+      <h2>Apply to Thiagarajar College of Engineering</h2>
+      <form id="applyForm" novalidate>
+        <div class="form-group">
+          <label for="applicantName">Full Name</label>
+          <input type="text" id="applicantName" name="applicantName" required>
+        </div>
+
+        <div class="form-group">
+          <label for="applicantEmail">Email</label>
+          <input type="email" id="applicantEmail" name="applicantEmail" required>
+        </div>
+
+        <div class="form-group">
+          <label for="courseSelect">Course Applied For</label>
+          <select id="courseSelect" name="courseSelect" required>
+            <option value="">Select a course</option>
+            <option value="CSE">B.E. Computer Science and Engineering</option>
+            <option value="MECH">B.E. Mechanical Engineering</option>
+            <option value="CIVIL">B.E. Civil Engineering</option>
+            <option value="ECE">M.E. Electronics and Communication Engineering</option>
+          </select>
+        </div>
+
+        <button type="submit">Submit Application</button>
+        <div class="form-success" style="display:none;">Thank you for applying! We'll get in touch soon.</div>
+      </form>
+    </section>
+  </main>
+
+  <div id="footer-placeholder"></div>
+  <script src="../js/components.js"></script>
+  <script src="../js/university-detail.js"></script>
+  <script>
+    loadComponent("#nav-placeholder", "../components/nav.html");
+    loadComponent("#footer-placeholder", "../components/footer.html", function() {
+      const yearSpan = document.getElementById('year');
+      if (yearSpan) yearSpan.textContent = new Date().getFullYear();
+    });
+  </script>
+</body>
+</html>
